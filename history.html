@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion History - XE Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>💱 XE Clone</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="converter.html" class="nav-link">Converter</a>
+                <a href="details.html" class="nav-link">Details</a>
+                <a href="history.html" class="nav-link active">History</a>
+                <a href="settings.html" class="nav-link">Settings</a>
+            </nav>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="history-section">
+            <div class="history-header">
+                <h2>Conversion History</h2>
+                <div class="history-controls">
+                    <div class="filter-group">
+                        <label for="currency-filter">Filter by Currency:</label>
+                        <select id="currency-filter">
+                            <option value="">All Currencies</option>
+                        </select>
+                    </div>
+                    <button id="clear-history-btn" class="clear-btn">🗑️ Clear History</button>
+                </div>
+            </div>
+
+            <div class="history-stats">
+                <div class="stat-card">
+                    <h4>Total Conversions</h4>
+                    <p id="total-conversions">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Most Used Currency</h4>
+                    <p id="most-used-currency">-</p>
+                </div>
+                <div class="stat-card">
+                    <h4>First Conversion</h4>
+                    <p id="first-conversion">-</p>
+                </div>
+            </div>
+
+            <div class="history-list">
+                <div id="history-empty" class="empty-state" style="display: none;">
+                    <div class="empty-icon">📊</div>
+                    <h3>No Conversion History</h3>
+                    <p>Start converting currencies to see your history here.</p>
+                    <a href="converter.html" class="cta-button">Start Converting</a>
+                </div>
+
+                <div id="history-items" class="history-items">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <div class="export-section">
+                <h3>Export History</h3>
+                <div class="export-controls">
+                    <button id="export-json-btn" class="export-btn">📄 Export as JSON</button>
+                    <button id="export-csv-btn" class="export-btn">📊 Export as CSV</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 XE Clone Currency Exchange. Educational Project.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

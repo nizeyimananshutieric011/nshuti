@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter - XE Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>💱 XE Clone</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="converter.html" class="nav-link active">Converter</a>
+                <a href="details.html" class="nav-link">Details</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="settings.html" class="nav-link">Settings</a>
+            </nav>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="converter-section">
+            <h2>Currency Converter</h2>
+            
+            <div class="converter-card">
+                <div class="converter-form">
+                    <div class="input-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01" required>
+                    </div>
+
+                    <div class="currency-row">
+                        <div class="input-group">
+                            <label for="from-currency">From</label>
+                            <div class="currency-select-wrapper">
+                                <input type="text" id="from-search" placeholder="Search currency..." class="currency-search">
+                                <select id="from-currency" required>
+                                    <option value="">Select currency</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="swap-btn" class="swap-btn" title="Swap currencies">
+                            <span class="swap-icon">⇄</span>
+                        </button>
+
+                        <div class="input-group">
+                            <label for="to-currency">To</label>
+                            <div class="currency-select-wrapper">
+                                <input type="text" id="to-search" placeholder="Search currency..." class="currency-search">
+                                <select id="to-currency" required>
+                                    <option value="">Select currency</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="convert-btn" class="convert-btn">
+                        <span class="btn-text">Convert</span>
+                        <span class="loading-spinner" style="display: none;">⏳</span>
+                    </button>
+                </div>
+
+                <div id="result-section" class="result-section" style="display: none;">
+                    <div class="result-amount">
+                        <span id="from-amount-display"></span>
+                        <span id="from-currency-display"></span>
+                        <span>=</span>
+                        <span id="to-amount-display" class="converted-amount"></span>
+                        <span id="to-currency-display"></span>
+                    </div>
+                    
+                    <div class="exchange-rate-info">
+                        <p><strong>Exchange Rate:</strong> <span id="exchange-rate"></span></p>
+                        <p><strong>Last Updated:</strong> <span id="timestamp"></span></p>
+                    </div>
+
+                    <button id="save-conversion-btn" class="save-btn">💾 Save to History</button>
+                </div>
+            </div>
+
+            <div class="popular-conversions">
+                <h3>Popular Conversions</h3>
+                <div class="popular-grid">
+                    <button class="popular-btn" data-from="USD" data-to="EUR">USD to EUR</button>
+                    <button class="popular-btn" data-from="USD" data-to="GBP">USD to GBP</button>
+                    <button class="popular-btn" data-from="EUR" data-to="GBP">EUR to GBP</button>
+                    <button class="popular-btn" data-from="USD" data-to="JPY">USD to JPY</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 XE Clone Currency Exchange. Educational Project.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

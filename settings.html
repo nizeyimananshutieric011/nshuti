@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - XE Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>💱 XE Clone</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="converter.html" class="nav-link">Converter</a>
+                <a href="details.html" class="nav-link">Details</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="settings.html" class="nav-link active">Settings</a>
+            </nav>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="settings-section">
+            <h2>Settings</h2>
+            
+            <div class="settings-grid">
+                <div class="setting-card">
+                    <h3>🎨 Appearance</h3>
+                    <div class="setting-group">
+                        <label for="theme-toggle">Theme</label>
+                        <div class="theme-switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </div>
+                        <span class="theme-label">Light Mode</span>
+                    </div>
+                </div>
+
+                <div class="setting-card">
+                    <h3>💱 Currency Preferences</h3>
+                    <div class="setting-group">
+                        <label for="default-from">Default "From" Currency</label>
+                        <select id="default-from">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                        </select>
+                    </div>
+                    <div class="setting-group">
+                        <label for="default-to">Default "To" Currency</label>
+                        <select id="default-to">
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-card">
+                    <h3>🌐 Language</h3>
+                    <div class="setting-group">
+                        <label for="language">Display Language</label>
+                        <select id="language">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="setting-card">
+                    <h3>📊 Data & Privacy</h3>
+                    <div class="setting-group">
+                        <label for="auto-save">Auto-save Conversions</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="auto-save" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <label for="clear-data">Clear All Data</label>
+                        <button id="clear-data-btn" class="danger-btn">🗑️ Clear All Data</button>
+                    </div>
+                </div>
+
+                <div class="setting-card">
+                    <h3>🔔 Notifications</h3>
+                    <div class="setting-group">
+                        <label for="rate-alerts">Rate Change Alerts</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="rate-alerts">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="setting-group">
+                        <label for="sound-effects">Sound Effects</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="sound-effects">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setting-card">
+                    <h3>ℹ️ About</h3>
+                    <div class="about-info">
+                        <p><strong>Version:</strong> 1.0.0</p>
+                        <p><strong>Project:</strong> XE Clone Currency Exchange</p>
+                        <p><strong>Purpose:</strong> Educational Project</p>
+                        <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-actions">
+                <button id="save-settings-btn" class="save-btn">💾 Save Settings</button>
+                <button id="reset-settings-btn" class="reset-btn">🔄 Reset to Default</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 XE Clone Currency Exchange. Educational Project.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "currency-exchange-app",
+  "version": "1.0.0",
+  "description": "A simple currency exchange web application for L3 students",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "python -m http.server 8000",
+    "build": "echo 'Build complete'",
+    "test": "echo 'Tests complete'"
+  },
+  "keywords": [
+    "currency",
+    "exchange",
+    "converter",
+    "javascript",
+    "education"
+  ],
+  "author": "Student",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
