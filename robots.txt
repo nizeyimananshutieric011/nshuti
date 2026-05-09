@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Sitemap: https://nizeyimananshutieric011.github.io/nshuti/sitemap.xml
+
+# Allow search engines to index all pages
+Allow: /index.html
+Allow: /converter.html
+Allow: /details.html
+Allow: /history.html
+Allow: /settings.html
+
+# Block access to development files
+Disallow: /js/
+Disallow: /css/
+Disallow: /assets/
+Disallow: /*.json
+Disallow: /*.md

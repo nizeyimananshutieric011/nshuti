@@ -3,205 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional currency exchange application with real-time rates, conversion history, and detailed analytics. Educational project demonstrating modern web development.">
-    <meta name="keywords" content="currency exchange, converter, forex, rates, finance, educational project">
-    <meta name="author" content="Student Project">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="XE Clone - Currency Exchange Application">
-    <meta property="og:description" content="Professional currency exchange converter with real-time rates and analytics">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="XE Clone - Currency Exchange">
-    <meta name="twitter:description" content="Professional currency exchange converter">
-    
-    <title>Currency Exchange - Professional XE Clone | Educational Project</title>
+    <title>Currency Exchange App</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "XE Clone Currency Exchange",
-        "description": "Professional currency exchange application with real-time rates",
-        "url": "",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
-    }
-    </script>
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <header class="navbar" role="banner">
+    <header class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h1 aria-label="XE Clone Currency Exchange">💱 XE Clone</h1>
+                <h1>💱 Currency Exchange</h1>
             </div>
-            <nav class="nav-menu" role="navigation" aria-label="Main navigation">
-                <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
                 <a href="converter.html" class="nav-link">Converter</a>
-                <a href="details.html" class="nav-link">Details</a>
-                <a href="history.html" class="nav-link">History</a>
-                <a href="settings.html" class="nav-link">Settings</a>
             </nav>
-            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
-    <main id="main-content" class="container" role="main">
-        <section class="hero" aria-labelledby="hero-title">
+    <main class="container">
+        <section class="hero">
             <div class="hero-content">
-                <h2 id="hero-title">Real-Time Currency Exchange</h2>
-                <p>Convert between 170+ currencies with live exchange rates and professional analytics</p>
-                <a href="converter.html" class="cta-button" aria-label="Go to currency converter">Convert Now</a>
+                <h2>Currency Exchange</h2>
+                <p>Convert between currencies with live exchange rates</p>
+                <a href="converter.html" class="cta-button">Convert Now</a>
             </div>
             
-            <section class="quick-converter" aria-labelledby="quick-converter-title">
-                <h3 id="quick-converter-title">Quick Convert</h3>
-                <form class="quick-form" role="form" aria-label="Quick currency conversion">
+            <section class="quick-converter">
+                <h3>Quick Convert</h3>
+                <form class="quick-form">
                     <div class="form-group">
-                        <label for="quick-amount" class="visually-hidden">Amount</label>
-                        <input 
-                            type="number" 
-                            id="quick-amount" 
-                            placeholder="Amount" 
-                            min="0" 
-                            step="0.01"
-                            aria-describedby="quick-amount-help"
-                            required
-                        >
-                        <small id="quick-amount-help" class="visually-hidden">Enter the amount you want to convert</small>
+                        <input type="number" id="quick-amount" placeholder="Amount" min="0" step="0.01" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="quick-from" class="visually-hidden">From currency</label>
-                        <select id="quick-from" aria-label="Select currency to convert from">
-                            <option value="USD">USD - US Dollar</option>
-                            <option value="EUR">EUR - Euro</option>
-                            <option value="GBP">GBP - British Pound</option>
-                            <option value="JPY">JPY - Japanese Yen</option>
+                        <select id="quick-from">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
                         </select>
                     </div>
                     
-                    <span aria-hidden="true">to</span>
+                    <span>to</span>
                     
                     <div class="form-group">
-                        <label for="quick-to" class="visually-hidden">To currency</label>
-                        <select id="quick-to" aria-label="Select currency to convert to">
-                            <option value="EUR">EUR - Euro</option>
-                            <option value="USD">USD - US Dollar</option>
-                            <option value="GBP">GBP - British Pound</option>
-                            <option value="JPY">JPY - Japanese Yen</option>
+                        <select id="quick-to">
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="JPY">JPY</option>
                         </select>
                     </div>
                     
-                    <button 
-                        type="button" 
-                        id="quick-convert-btn" 
-                        class="quick-btn"
-                        aria-label="Convert currency"
-                    >
-                        Convert
-                    </button>
+                    <button type="button" id="quick-convert-btn" class="quick-btn">Convert</button>
                 </form>
-                <div id="quick-result" class="quick-result" role="status" aria-live="polite" aria-atomic="true"></div>
+                <div id="quick-result" class="quick-result"></div>
             </section>
         </section>
 
-        <section class="features" aria-labelledby="features-title">
-            <h2 id="features-title">Features</h2>
+        <section class="features">
+            <h2>Features</h2>
             <div class="feature-grid">
-                <article class="feature-card">
-                    <h3><span aria-hidden="true">🌍</span> Global Coverage</h3>
-                    <p>Convert between 170+ world currencies with accurate, real-time exchange rates</p>
-                </article>
-                <article class="feature-card">
-                    <h3><span aria-hidden="true">📊</span> Live Rates</h3>
-                    <p>Real-time exchange rate updates with professional market data integration</p>
-                </article>
-                <article class="feature-card">
-                    <h3><span aria-hidden="true">📈</span> Historical Data</h3>
-                    <p>Track currency trends over time with comprehensive historical analytics</p>
-                </article>
-                <article class="feature-card">
-                    <h3><span aria-hidden="true">💾</span> Conversion History</h3>
-                    <p>Save and review your past conversions with detailed export options</p>
-                </article>
-            </div>
-        </section>
-        
-        <!-- Additional Educational Section -->
-        <section class="educational-content" aria-labelledby="edu-title">
-            <h2 id="edu-title">Learn About Currency Exchange</h2>
-            <div class="edu-grid">
-                <article class="edu-card">
-                    <h3>What is Currency Exchange?</h3>
-                    <p>Currency exchange is the process of converting one country's currency into another. This is essential for international trade, travel, and investment.</p>
-                </article>
-                <article class="edu-card">
-                    <h3>How Exchange Rates Work</h3>
-                    <p>Exchange rates determine how much one currency is worth in another currency. They fluctuate based on economic factors, market demand, and government policies.</p>
-                </article>
-                <article class="edu-card">
-                    <h3>Factors Affecting Rates</h3>
-                    <p>Interest rates, inflation, political stability, and economic performance all influence currency values in the global market.</p>
-                </article>
+                <div class="feature-card">
+                    <h3>🌍 Global Coverage</h3>
+                    <p>Convert between world currencies with accurate exchange rates</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Live Rates</h3>
+                    <p>Real-time exchange rate updates</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💾 Save History</h3>
+                    <p>Save and review your past conversions</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About This Project</h3>
-                    <p>This is an educational project demonstrating modern web development techniques, responsive design, and interactive user interfaces.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Technologies Used</h3>
-                    <ul>
-                        <li>HTML5 Semantic Structure</li>
-                        <li>CSS3 with Advanced Animations</li>
-                        <li>JavaScript ES6+ Features</li>
-                        <li>Local Storage for Data Persistence</li>
-                        <li>Responsive Web Design</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Educational Features</h3>
-                    <ul>
-                        <li>Real-time Currency Conversion</li>
-                        <li>Historical Data Tracking</li>
-                        <li>Data Export Functionality</li>
-                        <li>Accessibility Compliance</li>
-                        <li>Mobile-First Design</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 XE Clone Currency Exchange. Educational Project for Web Development Course.</p>
-                <p>Last updated: <time datetime="2024-01-01">January 2024</time></p>
-            </div>
+            <p>&copy; 2024 Currency Exchange App. Educational Project.</p>
         </div>
     </footer>
 
